@@ -1,0 +1,155 @@
+/* Global styles */
+:root {
+    --primary-color: #3d64e6;
+    --secondary-color: #ffffff;
+    --text-color: #222a43;
+    --subtext-color: #5d6274;
+    --error-color: #ff465a;
+    --shadow-color: rgba(8, 21, 65, 0.25);
+    --border-radius: 10px;
+    --transition-speed: 0.3s;
+  }
+  
+  * {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+  }
+  
+  body {
+    background-color: var(--primary-color);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh; /* Allows for full height */
+    padding: 2em; /* Adds padding for better centering */
+    overflow-y: auto; /* Enables vertical scrolling */
+  }
+  
+  /* Container styles */
+  .container {
+    background-color: var(--secondary-color);
+    width: 90vw;
+    max-width: 600px;
+    padding: 2.5em;
+    border-radius: var(--border-radius);
+    box-shadow: 0 20px 30px var(--shadow-color);
+    text-align: center;
+    margin: 2em 0; /* Adds top and bottom margin for better spacing */
+  }
+  
+  /* Search wrapper styles */
+  .search-wrapper {
+    display: flex;
+    gap: 1.25em;
+    margin-bottom: 2em;
+    align-items: center;
+  }
+  
+  .search-wrapper input {
+    flex-grow: 1;
+    font-size: 1em;
+    padding: 0.8em;
+    border: 2px solid var(--primary-color);
+    border-radius: var(--border-radius);
+    outline: none;
+    color: var(--text-color);
+    transition: border-color var(--transition-speed);
+  }
+  
+  .search-wrapper input:focus {
+    border-color: darken(var(--primary-color), 10%);
+  }
+  
+  .search-wrapper button {
+    font-size: 1em;
+    background-color: var(--primary-color);
+    color: var(--secondary-color);
+    padding: 0.8em 1.2em;
+    border: none;
+    border-radius: var(--border-radius);
+    cursor: pointer;
+    transition: background-color var(--transition-speed);
+  }
+  
+  .search-wrapper button:hover {
+    background-color: darken(var(--primary-color), 10%);
+  }
+  
+  /* Result styles */
+  #result {
+    margin-top: 1.5em;
+    text-align: left;
+  }
+  
+  /* Image styles */
+  .flag-img {
+    width: 80%;
+    max-width: 250px; /* Provides more flexibility for larger flags */
+    height: auto; /* Maintains aspect ratio */
+    margin: 1.5em auto;
+    border-radius: var(--border-radius);
+    box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1);
+    display: block;
+  }
+  
+  /* Title styles */
+  .container h2 {
+    font-weight: 600;
+    color: var(--text-color);
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin-bottom: 1.5em;
+  }
+  
+  /* Data wrapper styles */
+  .data-wrapper {
+    margin-bottom: 1em;
+    letter-spacing: 0.3px;
+    padding: 0.8em 1em;
+    background-color: #f7f9fc;
+    border-radius: var(--border-radius);
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+  }
+  
+  .container h4 {
+    display: inline;
+    font-weight: 500;
+    color: var(--text-color);
+    margin-right: 5px;
+  }
+  
+  .container span {
+    color: var(--subtext-color);
+  }
+  
+  /* Error message styles */
+  .container h3 {
+    font-size: 1.2em;
+    font-weight: 400;
+    color: var(--error-color);
+    margin-top: 1em;
+  }
+  
+  /* Responsiveness */
+  @media (max-width: 768px) {
+    .container {
+      width: 95vw;
+      padding: 2em 1.5em;
+    }
+  
+    .search-wrapper {
+      flex-direction: column;
+    }
+  
+    .search-wrapper button {
+      width: 100%;
+    }
+  
+    .flag-img {
+      width: 90%; /* Makes flag images adapt well to smaller screens */
+      max-width: none; /* Removes max-width constraint */
+    }
+  }
+  
